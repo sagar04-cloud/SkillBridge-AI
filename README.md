@@ -69,4 +69,17 @@ The application uses a prioritized list of Gemini models to ensure reliability:
 2. `gemini-2.5-pro`
 3. `gemini-2.0-flash`
 4. `gemini-1.5-pro`
+
 ---
+
+## 🤝 Contact & Support
+
+This project is maintained by **Sagar U**. Feel free to reach out for collaborations or questions!
+
+-   **LinkedIn:** [linkedin.com/in/sagar-u/](https://www.linkedin.com/in/sagar-u/)
+-   **Email:** [sagaru.works@gmail.com](mailto:sagaru.works@gmail.com)
+-   **Portfolio:** [Sagar's Portfolio](https://github.com/sagar04-cloud)
+
+---
+
+Developed with ❤️ by **SkillBridge**
