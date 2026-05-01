@@ -29,29 +29,17 @@ async function main() {
         const genAI = new GoogleGenerativeAI(apiKey);
 
         // 3. Try to get model info logic (Simulated by trying to generate content on a strict model)
-        console.log("📡 Testing connection to 'gemini-2.0-flash'...");
+        console.log("📡 Testing connection to 'gemini-2.5-flash'...");
 
-        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
         try {
             const result = await model.generateContent("Hello, are you there?");
             const response = await result.response;
             console.log("✅ SUCCESS! Response: ", response.text());
         } catch (e) {
-            console.error("❌ Failed to use gemini-2.0-flash.");
+            console.error("❌ Failed to use gemini-2.5-flash.");
             console.error("Error details:", e.message);
-
-            // Fallback test
-            console.log("\n📡 Testing fallback 'gemini-2.5-flash'...");
-            try {
-                const modelPro = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-                const resultPro = await modelPro.generateContent("Hello?");
-                console.log("✅ SUCCESS with gemini-2.5-flash! Response: ", resultPro.response.text());
-                console.log("💡 RECOMMENDATION: Your API key works with gemini-2.5-flash.");
-            } catch (e2) {
-                console.error("❌ Failed to use gemini-pro as well.");
-                console.error("Error details:", e2.message);
-            }
         }
 
     } catch (error) {
